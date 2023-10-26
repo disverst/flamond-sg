@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import ProductInfo from './ProductInfo';
 import SubscribeButton from './SubscribeButton';
 import SubscriptionForm from './SubscriptionForm';
-import { useStripe, useElements } from '@stripe/react-stripe-js';
 
 const Main = () => {
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState('');
-  const stripe = useStripe();
-  const elements = useElements();
 
   const handleSubscribeClick = () => {
     setShowForm(!showForm);
